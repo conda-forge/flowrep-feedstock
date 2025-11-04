@@ -1,5 +1,5 @@
 {% set name = "flowrep" %}
-{% set version = "0.0.3" %}
+{% set version = "0.1.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flowrep-{{ version }}.tar.gz
-  sha256: 9e27d94c86d8354882d8d2b089ed9cf3fcdf7651346f913516d80e3ed9925253
+  sha256: e9d0cdcdcd6b8d7406e906b2b7112baeb37adcaa4d6f2dafc8dec48e4a9e013b
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - versioneer ==0.29
     - pip
   run:
-    - networkx >=3.4.2,<3.5.0
+    - networkx >=3.4.2,<=3.5
     - python >={{ python_min }},<3.14
     - numpy >=2.3.0,<2.4.0
     - semantikon >=0.0.20,<=0.0.21
