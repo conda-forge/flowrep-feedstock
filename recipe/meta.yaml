@@ -24,10 +24,9 @@ requirements:
     - pip
   run:
     - networkx >=3.4.2,<=3.5
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }},<3.15
     - numpy >=2.3.0,<2.4.0
-    - semantikon >=0.0.20,<=0.0.21
-
+    
 test:
   imports:
     - flowrep
