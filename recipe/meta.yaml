@@ -1,5 +1,5 @@
 {% set name = "flowrep" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flowrep-{{ version }}.tar.gz
-  sha256: e9d0cdcdcd6b8d7406e906b2b7112baeb37adcaa4d6f2dafc8dec48e4a9e013b
+  sha256: c16d59b351f02b0412b04a906f71bad4a5bc63bd8261587de3eb0c4b9e884dcd
 
 build:
   noarch: python
