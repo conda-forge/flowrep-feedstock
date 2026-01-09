@@ -20,7 +20,7 @@ requirements:
     - python {{ python_min }}
     - numpy
     - hatchling
-    - versioneer ==0.29
+    - hatch-vcs
     - pip
   run:
     - networkx >=3.4.2,<3.7.0
