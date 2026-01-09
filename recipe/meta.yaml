@@ -19,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - numpy
-    - setuptools >=68.0.0
+    - hatchling
     - versioneer ==0.29
     - pip
   run:
