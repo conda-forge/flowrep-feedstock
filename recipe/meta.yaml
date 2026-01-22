@@ -26,6 +26,7 @@ requirements:
     - networkx >=3.4.2,<3.7.0
     - python >={{ python_min }},<3.15
     - numpy >=2.3.0,<2.5.0
+    - pydantic
 
 test:
   imports:
