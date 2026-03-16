@@ -1,5 +1,5 @@
 {% set name = "flowrep" %}
-{% set version = "0.1.10" %}
+{% set version = "0.2.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flowrep-{{ version }}.tar.gz
-  sha256: 5644fa3887ebaf88d1a31738c6fc48543f111ccce71768d4d80deaae81428567
+  sha256: 9e0b06ee5def65b40d5899b033d4e35e16e1c8007b77c3a065a17e3bbc618d3f
 
 build:
   noarch: python
@@ -18,15 +18,14 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - numpy
     - hatchling
     - hatch-vcs
     - pip
   run:
     - networkx >=3.4.2,<3.7.0
     - python >={{ python_min }},<3.15
-    - numpy >=2.3.0,<2.5.0
-    - pydantic
+    - pydantic >=2.12.0,<2.13.0
+    - pyiron_snippets >=1.2.1,<2.0.0
 
 test:
   imports:
@@ -47,3 +46,4 @@ extra:
   recipe-maintainers:
     - samwaseda
     - jan-janssen
+    - liamhuber
