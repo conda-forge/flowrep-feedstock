@@ -1,0 +1,49 @@
+schema_version: 1
+
+context:
+  name: flowrep
+  version: "0.4.1"
+  python_min: "3.11"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/flowrep-${{ version }}.tar.gz
+  sha256: ab4a115a2ac6fc68f2d80b38f2d330dd39aa5379cadba4d3693c2af34c3f828f
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - hatch-vcs
+    - pip
+  run:
+    - python >=${{ python_min }},<3.15
+    - pydantic >=2.12.0,<2.13.0
+    - pyiron_snippets >=1.2.1,<2.0.0
+
+tests:
+  - python:
+      imports:
+        - flowrep
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: flowrep - Your premier tool for workflow representations
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/pyiron/flowrep/
+
+extra:
+  recipe-maintainers:
+    - samwaseda
+    - jan-janssen
+    - liamhuber
