@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: flowrep
-  version: 0.6.5
+  version: 0.6.6
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/flowrep-${{ version }}.tar.gz
-  sha256: 51160bfea0b04d13e49c7cda374f9173e54ffc1a7f0095e32f04260abe1e45a4
+  sha256: ec92ce7eaba7e6f414fba365f878d5be70871512700554fdb9fe430683a2086a
 
 build:
   number: 0
